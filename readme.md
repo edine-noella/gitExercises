@@ -365,3 +365,7 @@ $ git cherry-pick fcc0f1e233da5cafcf45f45f2e3c02c8585ebeb4
  create mode 100644 test6.md
 ```
 
+### 1.9: git log graph:
+### 1.10: git reflog:
+
+## Part 2: Branching Basics
