@@ -161,4 +161,70 @@ Successfully rebased and updated refs/heads/main.
 
 ```bash 
 
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git rebase -i HEAD~4
+[detached HEAD 5cd4dcd] Squahing two latests commits
+ Date: Mon May 20 14:17:42 2024 +0200
+ 2 files changed, 157 insertions(+)
+ create mode 100644 text5.md
+Successfully rebased and updated refs/heads/main.
 
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git rebase --continue
+fatal: No rebase in progress?
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git log
+commit 5cd4dcda3440b98b72eb19db00aee835dd65fd94 (HEAD -> main)
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 14:17:42 2024 +0200
+
+    Squahing two latests commits
+
+commit 046018df17d2f730b221338b1be77df8f2196a98
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 14:02:22 2024 +0200
+
+    chore: Create initial file
+
+commit 711e6684d286296e426990bfbf084a5ae7a92c38
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 14:02:08 2024 +0200
+
+    chore: Create initial file
+```
+
+### 1.6: Dropping a Commit:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git log
+commit fa6a28582cc1aab7e5f7ad09602cdd798135207e (HEAD -> main)
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 16:12:53 2024 +0200
+
+    unwanted
+
+commit 5cd4dcda3440b98b72eb19db00aee835dd65fd94
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 14:17:42 2024 +0200
+
+    Squahing two latests commits
+
+commit 046018df17d2f730b221338b1be77df8f2196a98
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 14:02:22 2024 +0200
+
+    chore: Create initial file
+
+commit 711e6684d286296e426990bfbf084a5ae7a92c38
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 14:02:08 2024 +0200
+
+    chore: Create initial file
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git reset --hard HEAD~1
+HEAD is now at 5cd4dcd Squahing two latests commits
+
+```
