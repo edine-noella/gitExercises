@@ -228,3 +228,59 @@ $ git reset --hard HEAD~1
 HEAD is now at 5cd4dcd Squahing two latests commits
 
 ```
+### 1.7: Reordering Commits:
+
+```bash
+git rebase -i HEAD~3
+CONFLICT (modify/delete): readme.md deleted in HEAD and modified in 5cd4dcd (Squahing two latests commits).  Version 5cd4dcd (Squahing two latests commits) of readme.md left in tree.
+error: could not apply 5cd4dcd... Squahing two latests commits
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 5cd4dcd... Squahing two latests commits
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main|REBASE 1/3)
+$ git add .
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main|REBASE 1/3)
+$ git rebase --continue
+[detached HEAD 131e34b] Squahing two latests commits
+ 2 files changed, 165 insertions(+)
+ create mode 100644 readme.md
+ create mode 100644 text5.md
+Auto-merging readme.md
+CONFLICT (add/add): Merge conflict in readme.md
+error: could not apply 046018d... chore: Create initial file
+hint: Resolve all conflicts manually, mark them as resolved with        
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".        
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+chore: Create initial file
+Could not apply 046018d... chore: Create initial file
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main|REBASE 2/3)
+$ git rebase --continue
+readme.md: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main|REBASE 2/3)
+$ git add .
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main|REBASE 2/3)
+$ git rebase --continue
+[detached HEAD 9c098f0] chore: Create initial file
+ 3 files changed, 0 insertions(+), 0 deletions(-) 
+ create mode 100644 test2.md
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+Successfully rebased and updated refs/heads/main.
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git add .
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git rebase --continue
+fatal: No rebase in progress?
+```
