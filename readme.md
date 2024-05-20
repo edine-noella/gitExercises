@@ -555,3 +555,37 @@ $ git tag -d v1.0
 Deleted tag 'v1.0' (was 098cff3)
 ```
 
+### 3.9: Pushing Local Work to Remote Repositories:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git add .
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git commit -m "last commit"
+[main 78b0082] last commit
+ 4 files changed, 53 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+ create mode 100644 fileTobeIgnore.tex
+ create mode 100644 stashTesting.txt
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 852 bytes | 852.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0        
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/edine-noella/gitExercises.git
+   098cff3..78b0082  main -> main
+```
+
+### 3.10: Pulling Changes from Remote Repositories:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git pull
+Already up to date.
+```
