@@ -369,4 +369,79 @@ $ git cherry-pick fcc0f1e233da5cafcf45f45f2e3c02c8585ebeb4
 ### 1.10: git reflog:
 
 ## Part 2: Branching Basics
-###
+
+### 2.1: Feature Branch Creation:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+```
+### 2.2: Working on the Feature Branch:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (ft/new-feature)
+$ git add .
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (ft/new-feature)
+$ git commit -m "Implemented core functionality for new feature"
+[ft/new-feature 743ecf5] Implemented core functionality for new feature
+ 2 files changed, 13 insertions(+), 1 deletion(-)
+ create mode 100644 feature.txt
+ ```
+
+### 2.3 Switching Back and Making More Changes
+
+```bash
+git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git add .
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git commit -m "Updated project readme"
+[main c996856] Updated project readme
+ 1 file changed, 1 deletion(-)       
+ delete mode 100644 text5.md
+```
+
+### 2.4: Local vs. Remote Branches:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (Ft/new-feature)
+$ git push origin Ft/new-feature
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 613 bytes | 613.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0        
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'Ft/new-feature' on GitHub by visiting:
+remote:      https://github.com/edine-noella/gitExercises/pull/new/Ft/new-feature
+remote:
+To https://github.com/edine-noella/gitExercises.git  
+ * [new branch]      Ft/new-feature -> Ft/new-feature
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (Ft/new-feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git pull
+remote: Enumerating objects: 1, done.
+Unpacking objects: 100% (1/1), 925 bytes | 154.00 KiB/s, done.100% (1/1)
+
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+From https://github.com/edine-noella/gitExercises
+   62f9096..be56651  main       -> origin/main
+Auto-merging readme.md
+CONFLICT (content): Merge conflict in readme.md
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
