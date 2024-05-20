@@ -369,3 +369,23 @@ $ git cherry-pick fcc0f1e233da5cafcf45f45f2e3c02c8585ebeb4
 ### 1.10: git reflog:
 
 ## Part 2: Branching Basics
+
+### 2.1: Feature Branch Creation:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+```
+### 2.2: Working on the Feature Branch:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (ft/new-feature)
+$ git add .
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (ft/new-feature)
+$ git commit -m "Implemented core functionality for new feature"
+[ft/new-feature 743ecf5] Implemented core functionality for new feature
+ 2 files changed, 13 insertions(+), 1 deletion(-)
+ create mode 100644 feature.txt
+ ```
