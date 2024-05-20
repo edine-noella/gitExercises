@@ -460,4 +460,9 @@ Deleted branch Ft/new-feature (was 0078708).
 ```
 ### 2.6: Creating a Branch from a Commit
 ```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git checkout -b ft/new-branch-from-commit a5d15c8dac5459440ea1f3d26bae3d4a7b4577f0
+Switched to a new branch 'ft/new-branch-from-commit'
 ```
+### 2.7: branch Merging
+```bash
