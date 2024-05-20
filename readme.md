@@ -477,6 +477,31 @@ Fast-forward
  ```
 
 ### 2.8: Branch Rebase
-    
-    ```bash 
-    
+
+since I already brought the changes with merge
+```bash 
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git rebase Ft/new-branch-from-commit
+Current branch main is up to date.
+```
+
+### 2.9: Renaming Branches
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git branch -m ft/new-branch-from-commit ft/improved-branch-name
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git branch
+  Ft/branch
+  Ft/improved-branch-name
+* main
+```
+
+### 2.10: Checking Out Detached HEAD:
+
+```bash
+When you detach HEAD, you are in a "detached HEAD state." This means:
+Temporary State: You are not on any branch. Any new commits you make in this state are not associated with any branch and are referenced only by the detached HEAD pointer.
+this might be used when You might want to check out a specific commit to test or debug code without affecting your current branches.
+```
