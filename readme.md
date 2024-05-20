@@ -505,3 +505,53 @@ When you detach HEAD, you are in a "detached HEAD state." This means:
 Temporary State: You are not on any branch. Any new commits you make in this state are not associated with any branch and are referenced only by the detached HEAD pointer.
 this might be used when You might want to check out a specific commit to test or debug code without affecting your current branches.
 ```
+
+## Part 3: Advanced Workflows 
+
+### 3.1: Stashing Changes:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git stash
+Saved working directory and index state WIP on main: 098cff3 finalized part 2
+```
+
+### 3.2: Applying Stashed Changes:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed) 
+        stashTesting.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (8d0c70dd634ee92a0f7905ea9e10befcc80c03d2)
+```
+### 3.7: Working with Tags:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git tag v1.0
+```
+
+### 3.8: Listing and Deleting Tags:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git tag
+v1.0
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git tag -d v1.0
+Deleted tag 'v1.0' (was 098cff3)
+```
+
