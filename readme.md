@@ -445,3 +445,19 @@ CONFLICT (content): Merge conflict in readme.md
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
+### 2.5: Branch Deletion:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git branch
+  Ft/branch
+  Ft/new-feature
+* main
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git branch -d Ft/new-feature
+Deleted branch Ft/new-feature (was 0078708).
+```
+### 2.6: Creating a Branch from a Commit
+```bash
+```
