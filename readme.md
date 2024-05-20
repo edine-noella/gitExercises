@@ -284,3 +284,84 @@ Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExer
 $ git rebase --continue
 fatal: No rebase in progress?
 ```
+
+### 1.8: Cherry-Picking Commits:
+
+```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git checkout -b Ft/branch 
+Switched to a new branch 'Ft/branch'
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (Ft/branch)
+$ git add .
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (Ft/branch)
+$ git commit -m "Implemented test 6"
+[Ft/branch fcc0f1e] Implemented test 6
+ 1 file changed, 1 insertion(+)       
+ create mode 100644 test6.md
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (Ft/branch)
+$ git log
+commit fcc0f1e233da5cafcf45f45f2e3c02c8585ebeb4 (HEAD -> Ft/branch)
+commit fcc0f1e233da5cafcf45f45f2e3c02c8585ebeb4 (HEAD -> Ft/branch)
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 16:38:31 2024 +0200
+
+    Implemented test 6
+
+commit a13db4f0cf6a1d2f015adbb9afdfc978bfe1a1e2 (origin/main, main)
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 16:31:32 2024 +0200
+
+    latests changes read me file
+
+commit 03e53855cc86dbf2b61ffe7376d17592807749a4
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 16:20:33 2024 +0200
+
+    part 1 task 66
+
+commit 9c098f0cdef5cd4d0e6155466a55f7dc46c63e60
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 14:02:22 2024 +0200
+
+    chore: Create initial file
+
+commit 131e34bdb622544d396570f5b176d5455f76cf7c
+Author: edine-noella <edinenoella@gmail.com>
+Date:   Mon May 20 14:17:42 2024 +0200
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (Ft/branch)
+$ git checkout 
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (Ft/branch)
+$ git cherry-pick fcc0f1e233da5cafcf45f45f2e3c02c8585ebeb4
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch Ft/branch
+You are currently cherry-picking commit fcc0f1e.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+nothing to commit, working tree clean
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (Ft/branch|CHERRY-PICKING)
+$ git checkout main
+Switched to branch 'main'
+warning: cancelling a cherry picking in progress
+Your branch is up to date with 'origin/main'.
+
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$ git cherry-pick fcc0f1e233da5cafcf45f45f2e3c02c8585ebeb4
+[main 3f3bab6] Implemented test 6
+ Date: Mon May 20 16:38:31 2024 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test6.md
+```
+
