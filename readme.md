@@ -466,3 +466,17 @@ Switched to a new branch 'ft/new-branch-from-commit'
 ```
 ### 2.7: branch Merging
 ```bash
+Edine@DESKTOP-DTASPUT MINGW64 ~/Documents/the Gym/git Advanced Practices/gitExercises (main)
+$  git merge Ft/new-branch-from-commit
+Updating a5d15c8..99d8fc9
+Fast-forward
+ newBranch.txt | 0 
+ readme.md     | 7 ++++++-
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+ create mode 100644 newBranch.txt
+ ```
+
+### 2.8: Branch Rebase
+    
+    ```bash 
+    
